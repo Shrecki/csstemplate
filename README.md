@@ -1,2 +1,2 @@
 # csstemplate
-Simple repo to host CSS stylesheets
+Simple repo to host CSS stylesheets (mainly for forums)
