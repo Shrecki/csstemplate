@@ -1,3 +1,232 @@
-body {background-color: powderblue;}
-h1   {color: blue;}
-p    {color: red;}
+html, body {
+  height: 100%;
+  background-color: black;
+  color: lightcyan;
+  font-size: calc(10px + 2vw);
+	font-family: 'VT323', monospace, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.label_z {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+.input_z,
+.label_z {
+    margin: 0.4rem 0;
+}
+
+.input_z[name=username] {
+    pointer-events: none;
+    background-color: lightblue;
+ }
+
+.svg_z {
+  width: 114px;
+  height: 114px;
+  margin: 1em;
+}
+
+.bg {
+  fill: none;
+  stroke-width: 10px;
+  stroke: #1A2C34;
+}
+
+[class^="meter-"] {
+  fill: none;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  
+}
+
+
+.meter-1 {
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  stroke: aqua;
+}
+
+
+.meter-1.animated {
+  stroke-dasharray: 360;
+  stroke-dashoffset: 0;
+  animation: progress-1 1s ease-out;
+  stroke: aqua;
+}
+
+.data_disp {
+  display: none;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.wrap.animated {
+  transform: scale(70%, 70%) translate(0%, -50%);
+}
+
+.button_z {
+  min-width: 350px;
+  min-height: 350px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 0px 25px 15px rgba(79, 209, 197, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  z-index: 2;
+  }
+
+.button_z img {
+  display: block;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  transform: translate(0%, 0%);
+}
+
+
+
+.button_z::before {
+content: '';
+  border-radius: 50%;
+  min-width: calc(300px + 50px);
+  min-height: calc(300px + 50px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 24px 10px rgba(0, 255, 203, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.button_z:hover, .button_z:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+.button_z:hover::before, .button_z:focus::before {
+  opacity: 1;
+}
+
+.button_z::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 10px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.button_z.special::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 10px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button_z:hover::after, .button_z:focus::after {
+  animation: none;
+  display: none;
+}
+
+
+.folder_button {
+  background: transparent;
+  outline: none;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  display: none;
+  color: white;
+}
+
+.folder_button img {
+  display: inline;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.folder_button:focus {
+  outline: solid;
+  outline-color: white;
+}
+
+.data_button {
+  display: none;
+}
+
+
+@keyframes ring {
+  0% {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+@keyframes trans{
+  0% {
+   transform: translateX(-500%);
+   opacity: 0;
+   }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes blinker {
+   50%{
+      opacity: 0;
+   }
+}
+
+@keyframes progress-1 {
+    from {
+        stroke-dashoffset: 360;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
