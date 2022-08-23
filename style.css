@@ -18,6 +18,10 @@
     margin: 0.4rem 0;
 }
 
+.input_z[type="password"] {
+	font-size: 0.4em;
+}
+
 .input_z[name=username] {
     pointer-events: none;
     background-color: lightblue;
@@ -69,7 +73,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .wrap.animated {
