@@ -18,7 +18,7 @@
     margin: 0.4rem 0;
 }
 
-.input_z[type="password"] {
+input[type="password"], .input_z {
 	font-size: 0.4em;
 }
 
