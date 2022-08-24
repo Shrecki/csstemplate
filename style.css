@@ -1,4 +1,8 @@
 .body_z {
+  display: flex;
+  flex-direction: column;
+  max-width: 789px;
+  min-height: 1000px;
   height: 100%;
   background-color: black;
   color: lightcyan;
@@ -26,11 +30,18 @@ input[type="password"], .input_z {
     pointer-events: none;
     background-color: lightblue;
  }
+ 
+ #narrative_zone {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+ }
 
 .svg_z {
   width: 114px;
   height: 114px;
   margin: 1em;
+  align-self: center;
 }
 
 .bg {
@@ -75,20 +86,53 @@ input[type="password"], .input_z {
   justify-content: center;
   flex-wrap: nowrap;
 }
-
+/*
 .wrap.animated {
   transform: scale(70%, 70%) translate(0%, -50%);
+}*/
+
+#login_wrapper {
+    display: flex;
+    width: 20%;
+    /*height: 20%;*/
+    border: none;/* solid 1px red;*/
+    justify-content: center;
+    align-items: flex-start;
+    transition: all 1s;
+    /*position: absolute;*/
 }
 
+#login_wrapper.special {
+    -webkit-transform: translateX(-100%) translateY(-10%);
+    transform: translateX(-100%) translateY(-10%);
+}
+
+/*
+#login_button {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    background-color: red;
+}*/
+
+#login_wrapper.special #login_button {
+    -webkit-transform: translateY(-20%) scale(0.25);
+    transform: translateY(-20%) scale(0.25);
+    
+}
+
+
 .button_z {
-  min-width: 350px;
-  min-height: 350px;
-  font-family: 'Nunito', sans-serif;
+  /*min-width: 350px;
+  min-height: 350px;*/
+  /*height: 20%;*/
+  display: inline-block;
+  /*font-family: 'Nunito', sans-serif;
   font-size: 22px;
   text-transform: uppercase;
   letter-spacing: 1.3px;
   font-weight: 700;
-  color: #313133;
+  color: #313133;*/
   background: #4FD1C5;
   border: none;
   border-radius: 50%;
@@ -97,16 +141,16 @@ input[type="password"], .input_z {
   cursor: pointer;
   outline: none;
   position: relative;
-  padding: 10px;
+  padding: 0.5%;
   z-index: 2;
   }
 
 .button_z img {
-  display: block;
-  height: 350px;
-  width: 350px;
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
-  transform: translate(0%, 0%);
 }
 
 
@@ -114,8 +158,8 @@ input[type="password"], .input_z {
 .button_z::before {
 content: '';
   border-radius: 50%;
-  min-width: calc(300px + 50px);
-  min-height: calc(300px + 50px);
+  min-width: 110%;
+  min-height: 110%;
   border: 6px solid #00FFCB;
   box-shadow: 0 0 24px 10px rgba(0, 255, 203, 0.64);
   position: absolute;
@@ -137,10 +181,10 @@ content: '';
 
 .button_z::after {
   content: '';
-  width: 30px;
-  height: 30px;
+  width: 10%;
+  height: 10%;
   border-radius: 100%;
-  border: 10px solid #00FFCB;
+  border: 0.8vh solid #00FFCB;
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -148,7 +192,7 @@ content: '';
   transform: translate(-50%, -50%);
   animation: ring 1.5s infinite;
 }
-
+/*
 .button_z.special::after {
   content: '';
   width: 30px;
@@ -160,11 +204,19 @@ content: '';
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+}*/
 
+/*
 .button_z:hover::after, .button_z:focus::after {
   animation: none;
   display: none;
+}*/
+
+
+#login_wrapper.special #login_button {
+    /*-webkit-transform: translateX(-100%);*/
+    transform: /*translateX(-100%)*/ scale(0.5);
+    transition: all 0.3s ease-in-out 0s;
 }
 
 
@@ -177,12 +229,13 @@ content: '';
   overflow: hidden;
   display: none;
   color: white;
+  width: 11%;
 }
 
 .folder_button img {
   display: inline;
-  height: 150px;
-  width: 150px;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -198,13 +251,13 @@ content: '';
 
 @keyframes ring {
   0% {
-    width: 300px;
-    height: 300px;
+    width: 90%;
+    height: 90%;
     opacity: 1;
   }
   100% {
-    width: 500px;
-    height: 500px;
+    width: 150%;
+    height: 150%;
     opacity: 0;
   }
 }
