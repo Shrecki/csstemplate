@@ -76,6 +76,8 @@ input[type="password"], .input_z {
 
 .data_disp {
   display: none;
+  font-size: 0.2em;
+  padding: 10px;
 }
 
 .wrap {
