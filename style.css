@@ -93,7 +93,7 @@ input[type="password"], .input_z {
 
 #login_wrapper {
     display: flex;
-    width: 20%;
+    width: 50%;
     /*height: 20%;*/
     border: none;/* solid 1px red;*/
     justify-content: center;
@@ -229,7 +229,7 @@ content: '';
   overflow: hidden;
   display: none;
   color: white;
-  width: 11%;
+  width: 25%;
 }
 
 .folder_button img {
