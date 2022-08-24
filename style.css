@@ -14,7 +14,8 @@
 
 .label_z {
     display: block;
-    font: 1rem 'Fira Sans', sans-serif;
+    font: 1.4rem 'Fira Sans', sans-serif;
+	color: lightcyan;
 }
 
 .input_z,
