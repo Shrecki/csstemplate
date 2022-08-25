@@ -18,6 +18,12 @@
 	color: lightcyan;
 }
 
+.error_pwd:{
+	display: block;
+	font: 1.4rem 'Fira Sans', sans-serif;
+	color: red;
+}
+
 .input_z,
 .label_z {
     margin: 0.4rem 0;
