@@ -9,7 +9,6 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-
 }
 
 .timeline::after {
@@ -101,13 +100,13 @@
 }
 
 .container_timeline.left .date {
-  right: -21%;
+  right: -30%;
   box-sizing: border-box;
 
 }
 
 .container_timeline.right .date {
-  left: -20%;
+  left: -30%;
     box-sizing: border-box;
 
 }
