@@ -15,7 +15,7 @@
   content: '';
   position: absolute;
   width: 2px;
-  background: lightcyan;
+  background: #465e5e;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -72,7 +72,7 @@
   height: 2px;
   top: calc(50% - 1px);
   right: 8px;
-  background: lightcyan;
+  background: #465e5e;
   z-index: 1;
     box-sizing: border-box;
 
@@ -100,13 +100,13 @@
 }
 
 .container_timeline.left .date {
-  right: -30%;
+  right: -50%;
   box-sizing: border-box;
 
 }
 
 .container_timeline.right .date {
-  left: -30%;
+  left: -50%;
     box-sizing: border-box;
 
 }
